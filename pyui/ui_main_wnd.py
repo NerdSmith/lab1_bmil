@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_wndmGidCu.ui'
+## Form generated from reading UI file 'main_wndEKbLUJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -102,6 +102,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.open_dict_btn)
 
+        self.signup_btn = QPushButton(self.frame_6)
+        self.signup_btn.setObjectName(u"signup_btn")
+
+        self.verticalLayout_3.addWidget(self.signup_btn)
+
+        self.login_btn = QPushButton(self.frame_6)
+        self.login_btn.setObjectName(u"login_btn")
+
+        self.verticalLayout_3.addWidget(self.login_btn)
+
+        self.list_auth_btn = QPushButton(self.frame_6)
+        self.list_auth_btn.setObjectName(u"list_auth_btn")
+
+        self.verticalLayout_3.addWidget(self.list_auth_btn)
+
 
         self.verticalLayout.addWidget(self.frame_6)
 
@@ -156,6 +171,9 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0430\u0440\u043e\u043b\u044c", None))
         self.gen_pass_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0433\u0435\u043d\u0435\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c", None))
         self.open_dict_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043b\u043e\u0432\u0430\u0440\u044c", None))
+        self.signup_btn.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f", None))
+        self.login_btn.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0445\u043e\u0434", None))
+        self.list_auth_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0435\u0447\u0435\u043d\u044c", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043b\u0438\u043d\u0430 \u0430\u043b\u0444\u0430\u0432\u0438\u0442\u0430", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043b\u043e\u0432\u0430\u0440\u044c", None))
     # retranslateUi

@@ -2,6 +2,10 @@ import random
 
 import matplotlib
 
+from widgets.LoginWindow import LoginWindow
+from widgets.NUniquePasswordsWindow import NUniquePasswordsWindow
+from widgets.SignUpWindow import SignUpWindow
+
 matplotlib.use('Qt5Agg')
 
 from PySide6.QtWidgets import QMainWindow
@@ -32,6 +36,9 @@ class MainWindow(QMainWindow):
 
         self.ui.gen_pass_btn.clicked.connect(self.gen_password)
         self.ui.open_dict_btn.clicked.connect(self.open_dict)
+        self.ui.signup_btn.clicked.connect(self.open_signup)
+        self.ui.list_auth_btn.clicked.connect(self.open_nu_list)
+        self.ui.login_btn.clicked.connect(self.open_login_wnd)
 
     def update_alphabet(self, x):
         self.curr_alphabet = self.alphabet.get_n_symbols(x)
@@ -54,3 +61,15 @@ class MainWindow(QMainWindow):
         if self.last_password:
             self.d = FreqWindow(self.last_password, self.curr_alphabet)
             self.d.exec()
+
+    def open_signup(self):
+        self.sup = SignUpWindow()
+        self.sup.exec()
+
+    def open_nu_list(self):
+        self.l = NUniquePasswordsWindow()
+        self.l.exec()
+
+    def open_login_wnd(self):
+        self.lw = LoginWindow()
+        self.lw.exec()
