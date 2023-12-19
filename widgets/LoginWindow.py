@@ -58,5 +58,5 @@ class LoginWindow(QDialog):
         self.last_key_release_time = current_time
 
     def login_btn_handler(self):
-        if self.ui.username_edit.text() and self.ui.password_edit.text():
-            self.bio.auth(self.ui.username_edit.text(), self.ui.password_edit.text())
+        if (self.ui.username_edit.text() or self.ui.id_edit.text()) and self.ui.password_edit.text():
+            self.bio.auth(self.ui.username_edit.text(), self.ui.id_edit.text(), self.ui.password_edit.text())

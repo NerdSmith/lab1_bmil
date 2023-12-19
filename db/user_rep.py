@@ -45,9 +45,13 @@ class UserRepository:
             )
             return non_unique_users
 
-    def find_user(self, username, password):
-        with Session(self.get_engine()) as session:
-            return session.query(User).filter_by(name=username, password=password).first()
+    def find_user(self, username, id, password):
+        if username:
+            with Session(self.get_engine()) as session:
+                return session.query(User).filter_by(name=username, password=password).first()
+        elif id:
+            with Session(self.get_engine()) as session:
+                return session.query(User).filter_by(id=id, password=password).first()
 
     def get_vectors_of_user(self, u):
         with Session(self.get_engine()) as session:

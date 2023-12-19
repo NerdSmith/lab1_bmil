@@ -57,8 +57,8 @@ class Biometric:
 
         self.current_metric = result_metric
 
-    def auth(self, username, password):
-        user = self.user_rep.find_user(username, password)
+    def auth(self, username, id, password):
+        user = self.user_rep.find_user(username, id, password)
         if not user:
             MSG("Уведомление", "Пользователь не найден")
         else:
@@ -91,7 +91,7 @@ class Biometric:
                                   enumerate(zip(mins, maxes))]
 
                 if hamming_vector.count(1) >= .6 * len(hamming_vector):
-                    MSG("Уведомление", "Аутентификация успешна")
+                    MSG("Уведомление", f"Аутентификация успешна - {user.name}")
                 else:
                     MSG('Уведомление', 'Аутентификация провалена')
 
